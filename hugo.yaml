@@ -1,0 +1,75 @@
+baseURL: "https://danyvidaletti.github.io/"
+title: "Danyela Vidaletti"
+theme: PaperMod
+languageCode: "en-us"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "Danyela Vidaletti"
+  description: "Analytics-driven Sales Operations — turning sales data into decisions."
+  author: "Danyela Vidaletti"
+  defaultTheme: auto
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: false
+  disableSpecial1stPost: true
+
+  homeInfoParams:
+    Title: "Hi, I'm Danyela 👋"
+    Content: >
+      **Analytics-driven Sales Operations** — turning sales data into decisions.
+
+
+      Currently a Data & Insights Analyst at **LinkedIn**, partnering with Sales Operations and Compensation leaders.
+      Postgraduate in Data Science & AI, Bachelor of Laws (LLB), EU Citizen based in Dublin.
+
+
+      I work where SQL, dashboards, and CRM meet quota, pipeline, and GTM strategy.
+
+  socialIcons:
+    - name: linkedin
+      url: "https://linkedin.com/in/danyvidaletti"
+    - name: github
+      url: "https://github.com/danyvidaletti"
+    - name: email
+      url: "mailto:dapvidaletti@gmail.com"
+
+  assets:
+    disableHLJS: false
+    favicon: "/favicon.ico"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 20
+    - identifier: experience
+      name: Experience
+      url: /experience/
+      weight: 30
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
