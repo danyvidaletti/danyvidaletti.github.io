@@ -173,7 +173,7 @@ body.home-page .main,
 .dv-hero-title {
     font-family: 'Fraunces', serif;
     font-weight: 400;
-    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
     line-height: 1.05;
     letter-spacing: -0.02em;
     color: var(--primary);
@@ -247,6 +247,7 @@ body.home-page .main,
     color: var(--content);
     line-height: 1.75;
     margin-bottom: 1.2em;
+    text-align: justify;
 }
 
 .dv-about-side {
