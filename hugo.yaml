@@ -15,9 +15,9 @@ minify:
 params:
   env: production
   title: "Danyela Vidaletti"
-  description: "Analytics-driven Sales Operations — turning sales data into decisions."
+  description: "Where sales operations meets analytical rigor."
   author: "Danyela Vidaletti"
-  defaultTheme: auto
+  defaultTheme: light
   ShowReadingTime: false
   ShowShareButtons: false
   ShowBreadCrumbs: true
@@ -26,16 +26,12 @@ params:
   disableSpecial1stPost: true
 
   homeInfoParams:
-    Title: "Hi, I'm Danyela 👋"
+    Title: "Where sales operations meets analytical rigor."
     Content: >
-      **Analytics-driven Sales Operations** — turning sales data into decisions.
+      I'm **Danyela Vidaletti** — a Data & Insights Analyst at **LinkedIn**, working alongside Sales Operations and Compensation leaders to bring clarity, structure and measurable outcomes to global sales programmes.
 
 
-      Currently a Data & Insights Analyst at **LinkedIn**, partnering with Sales Operations and Compensation leaders.
-      Postgraduate in Data Science & AI, Bachelor of Laws (LLB), EU Citizen based in Dublin.
-
-
-      I work where SQL, dashboards, and CRM meet quota, pipeline, and GTM strategy.
+      My work sits where SQL, dashboards and CRM meet quota, pipeline and GTM strategy. A background in Law and Compliance shapes how I treat data: with rigor, governance, and an eye for the decision waiting on the other side of the number.
 
   socialIcons:
     - name: linkedin
