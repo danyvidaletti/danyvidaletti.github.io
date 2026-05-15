@@ -14,7 +14,7 @@ minify:
 
 params:
   env: production
-  title: "Danyela Vidaletti"
+  title: "DV"
   description: "Where sales operations meets analytical rigor."
   author: "Danyela Vidaletti"
   defaultTheme: light
@@ -49,20 +49,28 @@ menu:
   main:
     - identifier: about
       name: About
-      url: /about/
+      url: /#about
       weight: 10
-    - identifier: projects
-      name: Projects
-      url: /projects/
+    - identifier: skills
+      name: Skills
+      url: /#skills
       weight: 20
     - identifier: experience
       name: Experience
-      url: /experience/
+      url: /#experience
       weight: 30
+    - identifier: education
+      name: Education
+      url: /#education
+      weight: 40
+    - identifier: portfolio
+      name: Portfolio
+      url: /#portfolio
+      weight: 50
     - identifier: contact
       name: Contact
-      url: /contact/
-      weight: 40
+      url: /#contact
+      weight: 60
 
 outputs:
   home:
