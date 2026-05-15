@@ -209,27 +209,63 @@
   <div class="dv-skills-grid">
     <div class="dv-skill-block">
       <h3>SQL &amp; Data Analysis</h3>
-      <p>SQL (Advanced) · Python (Pandas) · Excel (Advanced) · Large dataset manipulation · Data cleansing &amp; reconciliation</p>
+      <ul class="dv-tags">
+        <li>SQL (Advanced)</li>
+        <li>Python (Pandas)</li>
+        <li>Excel (Advanced)</li>
+        <li>Large dataset manipulation</li>
+        <li>Data cleansing &amp; reconciliation</li>
+      </ul>
     </div>
     <div class="dv-skill-block">
       <h3>Visualisation &amp; BI</h3>
-      <p>Tableau · Dashboard development · KPI reporting · Executive reporting · PowerPoint</p>
+      <ul class="dv-tags">
+        <li>Tableau</li>
+        <li>Dashboard development</li>
+        <li>KPI reporting</li>
+        <li>Executive reporting</li>
+        <li>PowerPoint</li>
+      </ul>
     </div>
     <div class="dv-skill-block">
       <h3>Sales Operations &amp; GTM</h3>
-      <p>Quota management · Territory planning · Pipeline tracking · Lead qualification &amp; routing · Customer segmentation · Campaign &amp; activity tracking</p>
+      <ul class="dv-tags">
+        <li>Quota management</li>
+        <li>Territory planning</li>
+        <li>Pipeline tracking</li>
+        <li>Lead qualification &amp; routing</li>
+        <li>Customer segmentation</li>
+        <li>Campaign &amp; activity tracking</li>
+      </ul>
     </div>
     <div class="dv-skill-block">
       <h3>CRM &amp; Sales Tools</h3>
-      <p>Salesforce · LinkedIn Sales Navigator · CRM administration · Contact / account / activity management · Outreach &amp; data-enrichment tools</p>
+      <ul class="dv-tags">
+        <li>Salesforce</li>
+        <li>LinkedIn Sales Navigator</li>
+        <li>CRM administration</li>
+        <li>Contact / account / activity management</li>
+        <li>Outreach &amp; data-enrichment tools</li>
+      </ul>
     </div>
     <div class="dv-skill-block">
       <h3>Process &amp; AI</h3>
-      <p>Process automation · Agentic AI workflows · Reproducible workflows · Documentation · Compliance-minded data governance</p>
+      <ul class="dv-tags">
+        <li>Process automation</li>
+        <li>Agentic AI workflows</li>
+        <li>Reproducible workflows</li>
+        <li>Documentation</li>
+        <li>Compliance-minded data governance</li>
+      </ul>
     </div>
     <div class="dv-skill-block">
       <h3>Stakeholder &amp; Communication</h3>
-      <p>Senior executive communication · Cross-functional collaboration (Sales, Marketing, Finance, IT) · Problem solving · Detail orientation</p>
+      <ul class="dv-tags">
+        <li>Senior executive communication</li>
+        <li>Cross-functional collaboration</li>
+        <li>Problem solving</li>
+        <li>Detail orientation</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -325,7 +361,7 @@
 <section id="portfolio" class="dv-section dv-section-alt">
   <div class="dv-section-head">
     <span class="dv-section-number">05</span>
-    <h2 class="dv-section-title">Selected work</h2>
+    <h2 class="dv-section-title">Discover my projects</h2>
   </div>
   <p class="dv-section-lede">Projects at the intersection of analytics and sales operations. Each case study covers the business question, the data, the approach, and the actionable answer.</p>
 
@@ -339,15 +375,41 @@
       <span class="dv-case-link">Read case study →</span>
     </div>
     <div class="dv-case-featured-visual" aria-hidden="true">
-      <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 240 120" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stop-color="#6b8e6f" stop-opacity="0.85"/>
-            <stop offset="100%" stop-color="#c9d4bc" stop-opacity="0.4"/>
+          <linearGradient id="featBar" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%"  stop-color="#87a878"/>
+            <stop offset="100%" stop-color="#2f4f3e"/>
+          </linearGradient>
+          <linearGradient id="featBarLight" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%"  stop-color="#c9d4bc"/>
+            <stop offset="100%" stop-color="#6b8e6f"/>
           </linearGradient>
         </defs>
-        <path d="M0,100 L30,80 L60,90 L90,55 L120,65 L150,30 L180,45 L200,20 L200,120 L0,120 Z" fill="url(#g1)"/>
-        <path d="M0,100 L30,80 L60,90 L90,55 L120,65 L150,30 L180,45 L200,20" stroke="#2f4f3e" stroke-width="1.5" fill="none"/>
+
+        {{/* grid lines */}}
+        <g stroke="#e6ddd1" stroke-width="1" opacity="0.7">
+          <line x1="0" x2="240" y1="30"  y2="30"/>
+          <line x1="0" x2="240" y1="60"  y2="60"/>
+          <line x1="0" x2="240" y1="90"  y2="90"/>
+          <line x1="0" x2="240" y1="110" y2="110"/>
+        </g>
+
+        {{/* baseline */}}
+        <line x1="20" x2="220" y1="110" y2="110" stroke="#d9cfc2" stroke-width="1.5"/>
+
+        {{/* 7 growth bars */}}
+        <rect x="24"  y="92"  width="20" height="18" rx="4" fill="url(#featBarLight)"/>
+        <rect x="52"  y="80"  width="20" height="30" rx="4" fill="url(#featBarLight)"/>
+        <rect x="80"  y="66"  width="20" height="44" rx="4" fill="url(#featBar)"/>
+        <rect x="108" y="52"  width="20" height="58" rx="4" fill="url(#featBar)"/>
+        <rect x="136" y="38"  width="20" height="72" rx="4" fill="url(#featBar)"/>
+        <rect x="164" y="24"  width="20" height="86" rx="4" fill="url(#featBar)"/>
+        <rect x="192" y="12"  width="20" height="98" rx="4" fill="url(#featBar)"/>
+
+        {{/* trend arrow */}}
+        <path d="M30,98 L205,18" stroke="#2f4f3e" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 4" fill="none" opacity="0.75"/>
+        <path d="M198,12 L215,17 L207,30 Z" fill="#2f4f3e" opacity="0.9"/>
       </svg>
     </div>
   </a>
