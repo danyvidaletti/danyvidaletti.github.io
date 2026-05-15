@@ -700,6 +700,26 @@ body.home-page .main,
     transform: translateY(-2px);
 }
 
+.dv-mini-card-soon {
+    border-style: dashed;
+    background-color: transparent;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 0.85;
+}
+
+.dv-mini-card-soon:hover {
+    transform: none;
+    border-color: var(--border-soft);
+}
+
+.dv-mini-card-soon h4 {
+    color: var(--tertiary);
+}
+
 .dv-mini-card h4 {
     font-family: 'Fraunces', serif;
     font-size: 1.1rem;
