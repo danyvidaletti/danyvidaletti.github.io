@@ -596,6 +596,14 @@ body.home-page .main,
     gap: 20px;
 }
 
+/* Inside a dv-section-alt the parent rule forces padding-inline on every
+   child. The featured box has its own border drawn at the container width,
+   so the mini-cards need padding-inline:0 to keep their outer edges aligned
+   with the featured's outer edges. */
+.dv-section-alt > .dv-mini-grid {
+    padding-inline: 0;
+}
+
 .dv-portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
