@@ -1,5 +1,160 @@
 {{- define "main" }}
 
+{{/* ============== DATA BAND — sales-dashboard styled, growth-oriented charts ============== */}}
+<div class="dv-databand" aria-hidden="true">
+  <svg viewBox="0 0 1600 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="barGrad" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%"  stop-color="#87a878"/>
+        <stop offset="100%" stop-color="#2f4f3e"/>
+      </linearGradient>
+      <linearGradient id="barGradLight" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%"  stop-color="#c9d4bc"/>
+        <stop offset="100%" stop-color="#6b8e6f"/>
+      </linearGradient>
+      <linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%"  stop-color="#6b8e6f" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#6b8e6f" stop-opacity="0.05"/>
+      </linearGradient>
+      <linearGradient id="donutFill" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%"  stop-color="#87a878"/>
+        <stop offset="100%" stop-color="#2f4f3e"/>
+      </linearGradient>
+      <linearGradient id="arrowGrad" x1="0" x2="1" y1="1" y2="0">
+        <stop offset="0%"  stop-color="#6b8e6f"/>
+        <stop offset="100%" stop-color="#2f4f3e"/>
+      </linearGradient>
+    </defs>
+
+    {{/* subtle horizontal grid — dashboard canvas feel */}}
+    <g stroke="#e6ddd1" stroke-width="1" opacity="0.7">
+      <line x1="0" x2="1600" y1="50"  y2="50"/>
+      <line x1="0" x2="1600" y1="100" y2="100"/>
+      <line x1="0" x2="1600" y1="150" y2="150"/>
+      <line x1="0" x2="1600" y1="190" y2="190"/>
+    </g>
+
+    {{/* ─── TILE 1: GROWING BAR CHART ─── (x: 60–500) */}}
+    <g>
+      {{/* baseline */}}
+      <line x1="80" x2="500" y1="190" y2="190" stroke="#d9cfc2" stroke-width="1.5"/>
+      {{/* 7 bars climbing left → right (growth) */}}
+      <rect x="100" y="160" width="28" height="30"  rx="6" fill="url(#barGradLight)">
+        <animate attributeName="height" dur="6s" values="20;30;25"  repeatCount="indefinite"/>
+        <animate attributeName="y"      dur="6s" values="170;160;165" repeatCount="indefinite"/>
+      </rect>
+      <rect x="160" y="150" width="28" height="40"  rx="6" fill="url(#barGradLight)">
+        <animate attributeName="height" dur="6s" values="35;45;40"  repeatCount="indefinite" begin="0.3s"/>
+        <animate attributeName="y"      dur="6s" values="155;145;150" repeatCount="indefinite" begin="0.3s"/>
+      </rect>
+      <rect x="220" y="130" width="28" height="60"  rx="6" fill="url(#barGrad)">
+        <animate attributeName="height" dur="6s" values="55;65;60"  repeatCount="indefinite" begin="0.6s"/>
+        <animate attributeName="y"      dur="6s" values="135;125;130" repeatCount="indefinite" begin="0.6s"/>
+      </rect>
+      <rect x="280" y="115" width="28" height="75"  rx="6" fill="url(#barGrad)">
+        <animate attributeName="height" dur="6s" values="70;80;75"  repeatCount="indefinite" begin="0.9s"/>
+        <animate attributeName="y"      dur="6s" values="120;110;115" repeatCount="indefinite" begin="0.9s"/>
+      </rect>
+      <rect x="340" y="90"  width="28" height="100" rx="6" fill="url(#barGrad)">
+        <animate attributeName="height" dur="6s" values="95;110;100" repeatCount="indefinite" begin="1.2s"/>
+        <animate attributeName="y"      dur="6s" values="95;80;90"   repeatCount="indefinite" begin="1.2s"/>
+      </rect>
+      <rect x="400" y="70"  width="28" height="120" rx="6" fill="url(#barGrad)">
+        <animate attributeName="height" dur="6s" values="115;135;125" repeatCount="indefinite" begin="1.5s"/>
+        <animate attributeName="y"      dur="6s" values="75;55;65"    repeatCount="indefinite" begin="1.5s"/>
+      </rect>
+      <rect x="460" y="50"  width="28" height="140" rx="6" fill="url(#barGrad)">
+        <animate attributeName="height" dur="6s" values="135;155;145" repeatCount="indefinite" begin="1.8s"/>
+        <animate attributeName="y"      dur="6s" values="55;35;45"    repeatCount="indefinite" begin="1.8s"/>
+      </rect>
+
+      {{/* trend arrow over the bars */}}
+      <path d="M100,165 L460,55" stroke="#2f4f3e" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 5" fill="none" opacity="0.7"/>
+      <path d="M450,48 L470,52 L460,68 Z" fill="#2f4f3e" opacity="0.85"/>
+    </g>
+
+    {{/* ─── TILE 2: AREA + LINE CHART climbing ─── (x: 560–1060) */}}
+    <g>
+      {{/* baseline */}}
+      <line x1="560" x2="1060" y1="190" y2="190" stroke="#d9cfc2" stroke-width="1.5"/>
+
+      {{/* area fill — clear upward trend */}}
+      <path fill="url(#areaFill)">
+        <animate attributeName="d" dur="9s" repeatCount="indefinite"
+          values="
+            M560,180 L620,165 L680,150 L740,155 L800,130 L860,115 L920,95 L980,80 L1040,60 L1060,55 L1060,190 L560,190 Z;
+            M560,175 L620,160 L680,145 L740,150 L800,125 L860,110 L920,90 L980,75 L1040,55 L1060,50 L1060,190 L560,190 Z;
+            M560,180 L620,165 L680,150 L740,155 L800,130 L860,115 L920,95 L980,80 L1040,60 L1060,55 L1060,190 L560,190 Z"/>
+      </path>
+
+      {{/* main trend line on top */}}
+      <path fill="none" stroke="#2f4f3e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <animate attributeName="d" dur="9s" repeatCount="indefinite"
+          values="
+            M560,180 L620,165 L680,150 L740,155 L800,130 L860,115 L920,95 L980,80 L1040,60 L1060,55;
+            M560,175 L620,160 L680,145 L740,150 L800,125 L860,110 L920,90 L980,75 L1040,55 L1060,50;
+            M560,180 L620,165 L680,150 L740,155 L800,130 L860,115 L920,95 L980,80 L1040,60 L1060,55"/>
+      </path>
+
+      {{/* data point markers */}}
+      <g fill="#2f4f3e">
+        <circle cx="620"  cy="165" r="4"><animate attributeName="cy" dur="9s" values="165;160;165" repeatCount="indefinite"/></circle>
+        <circle cx="740"  cy="155" r="4"><animate attributeName="cy" dur="9s" values="155;150;155" repeatCount="indefinite"/></circle>
+        <circle cx="860"  cy="115" r="4"><animate attributeName="cy" dur="9s" values="115;110;115" repeatCount="indefinite"/></circle>
+        <circle cx="980"  cy="80"  r="4"><animate attributeName="cy" dur="9s" values="80;75;80"    repeatCount="indefinite"/></circle>
+        <circle cx="1060" cy="55"  r="6" stroke="#faf7f2" stroke-width="2">
+          <animate attributeName="cy" dur="9s" values="55;50;55" repeatCount="indefinite"/>
+          <animate attributeName="r"  dur="2.5s" values="6;8;6"   repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+
+    {{/* ─── TILE 3: DONUT CHART (segment growth animation) ─── (centered at x=1180, y=110) */}}
+    <g transform="translate(1180,110)">
+      {{/* background ring */}}
+      <circle r="60" fill="none" stroke="#e6ddd1" stroke-width="18"/>
+
+      {{/* filled arc (animates from small to large segment — feels like "% growth") */}}
+      <circle r="60" fill="none" stroke="url(#donutFill)" stroke-width="18"
+              stroke-dasharray="377" stroke-dashoffset="120"
+              transform="rotate(-90)" stroke-linecap="round">
+        <animate attributeName="stroke-dashoffset" dur="7s"
+                 values="200;90;120;90;200" repeatCount="indefinite"/>
+      </circle>
+
+      {{/* center indicator dot pulsing */}}
+      <circle r="6" fill="#2f4f3e">
+        <animate attributeName="r" dur="2.5s" values="5;8;5" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    {{/* ─── TILE 4: BIG UPWARD ARROW + KPI bar ─── (x: 1300–1540) */}}
+    <g>
+      {{/* short KPI bar climbing */}}
+      <rect x="1320" y="150" width="22" height="40" rx="4" fill="url(#barGradLight)">
+        <animate attributeName="height" dur="5s" values="40;55;45"  repeatCount="indefinite"/>
+        <animate attributeName="y"      dur="5s" values="150;135;145" repeatCount="indefinite"/>
+      </rect>
+      <rect x="1352" y="120" width="22" height="70" rx="4" fill="url(#barGrad)">
+        <animate attributeName="height" dur="5s" values="70;85;75"  repeatCount="indefinite" begin="0.4s"/>
+        <animate attributeName="y"      dur="5s" values="120;105;115" repeatCount="indefinite" begin="0.4s"/>
+      </rect>
+      <rect x="1384" y="90"  width="22" height="100" rx="4" fill="url(#barGrad)">
+        <animate attributeName="height" dur="5s" values="100;120;108" repeatCount="indefinite" begin="0.8s"/>
+        <animate attributeName="y"      dur="5s" values="90;70;82"    repeatCount="indefinite" begin="0.8s"/>
+      </rect>
+
+      {{/* large upward arrow signaling performance */}}
+      <g transform="translate(1450,60)">
+        <path d="M30,130 L30,40 L10,40 L40,0 L70,40 L50,40 L50,130 Z" fill="url(#arrowGrad)" opacity="0.95"/>
+        <path d="M40,0 L70,40 L50,40 L40,20 Z" fill="#ffffff" opacity="0.15"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="1450,60; 1450,52; 1450,60" dur="3.5s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </svg>
+</div>
+
 {{/* ============== HERO ============== */}}
 <section id="hero" class="dv-section dv-hero">
   <div class="dv-hero-inner">

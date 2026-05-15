@@ -99,7 +99,16 @@ blockquote {
     width: min(92vw, 1240px);
     max-width: 100%;
     margin: 0 auto;
-    padding: 32px 0 80px;
+    padding: 0 0 80px;
+}
+
+/* On the home page, allow the data band to span full viewport */
+body.list .main,
+body.home .main,
+.list .main,
+.home .main {
+    width: 100%;
+    max-width: 100%;
 }
 
 .post-content {
