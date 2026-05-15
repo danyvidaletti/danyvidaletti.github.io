@@ -3,3 +3,8 @@ resources/_gen/
 .hugo_build.lock
 .DS_Store
 node_modules/
+
+# Cert source files live in static/certs/ — keep originals out of git
+/AZ900.png
+/PL900.png
+/PCAP*.pdf

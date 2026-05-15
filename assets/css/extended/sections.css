@@ -429,6 +429,82 @@ body.home-page .main,
     font-size: 0.85rem;
 }
 
+/* ============== CERT CARDS (verify-credential style) ============== */
+.dv-cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dv-cert-card {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 16px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    transition: border-color 0.2s ease;
+}
+
+.dv-cert-card:hover {
+    border-color: var(--accent-mid);
+}
+
+.dv-cert-thumb {
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #faf7f2;
+    border: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.dv-cert-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dv-cert-body {
+    min-width: 0;
+}
+
+.dv-cert-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary);
+    margin: 0 0 4px;
+    line-height: 1.3;
+}
+
+.dv-cert-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: var(--tertiary);
+    letter-spacing: 0.02em;
+    margin: 0 0 8px;
+}
+
+.dv-cert-verify {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent-deep);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.dv-cert-verify:hover {
+    border-bottom-color: var(--accent-deep);
+}
+
 @media (max-width: 720px) {
     .dv-edu-grid {
         grid-template-columns: 1fr;
