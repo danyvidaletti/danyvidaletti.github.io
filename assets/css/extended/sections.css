@@ -678,9 +678,11 @@ body.home-page .main,
 .dv-contact-lede {
     font-size: 1.1rem;
     color: var(--secondary);
-    max-width: 60ch;
+    max-width: none;
     margin-bottom: 32px;
     line-height: 1.65;
+    white-space: nowrap;
+    overflow-x: auto;
 }
 
 .dv-contact-links {
