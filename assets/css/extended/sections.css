@@ -463,6 +463,17 @@ body.home-page .main,
     font-size: 0.85rem;
 }
 
+.dv-languages-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0 32px;
+    max-width: 900px;
+}
+
+.dv-languages-list li {
+    border-bottom: 1px solid var(--border-soft);
+}
+
 /* ============== CERT CARDS (verify-credential style) ============== */
 .dv-cert-list {
     display: flex;

@@ -51,26 +51,30 @@ menu:
       name: About
       url: /#about
       weight: 10
-    - identifier: skills
-      name: Skills
-      url: /#skills
-      weight: 20
-    - identifier: experience
-      name: Experience
-      url: /#experience
-      weight: 30
-    - identifier: education
-      name: Education
-      url: /#education
-      weight: 40
     - identifier: portfolio
       name: Portfolio
       url: /#portfolio
+      weight: 20
+    - identifier: skills
+      name: Skills
+      url: /#skills
+      weight: 30
+    - identifier: experience
+      name: Experience
+      url: /#experience
+      weight: 40
+    - identifier: education
+      name: Education
+      url: /#education
       weight: 50
+    - identifier: languages
+      name: Languages
+      url: /#languages
+      weight: 60
     - identifier: contact
       name: Contact
       url: /#contact
-      weight: 60
+      weight: 70
 
 outputs:
   home:
