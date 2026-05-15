@@ -50,6 +50,16 @@ tags: ["Python", "EDA", "Regression", "Public Data", "Storytelling"]
 </section>
 
 <section class="scene reveal">
+  <p class="scene-q">A face for the numbers</p>
+  <h2 class="scene-a">Melgaço, Pará. The lowest HDI in Brazil.</h2>
+  <div class="stat-tile">
+    <p class="stat-num">0.418</p>
+    <p class="stat-label">Rank 1 of 5,564. A municipality of ~24,800 people in the state of Pará (North region). Longevity sits near the national average. Education is less than one-third of it.</p>
+  </div>
+  <img src="/projects/hdi-brazil-2010/06-melgaco.png" alt="Melgaço pillar profile vs national mean" style="margin-top:36px;">
+</section>
+
+<section class="scene reveal">
   <p class="scene-q">So what?</p>
   <h2 class="scene-a">Three takeaways for anyone using this number to make decisions.</h2>
   <ol class="takeaways">
