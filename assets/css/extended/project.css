@@ -1,0 +1,233 @@
+/* ============== PROJECT CASE STUDY ============== */
+.dv-project {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: clamp(48px, 8vw, 120px) clamp(20px, 5vw, 48px) 80px;
+    color: var(--primary);
+}
+
+.dv-project-hero {
+    padding-bottom: clamp(60px, 8vw, 100px);
+    border-bottom: 1px solid var(--border-soft);
+    margin-bottom: clamp(60px, 9vw, 120px);
+    text-align: left;
+}
+
+.dv-project-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-mid);
+    margin-bottom: 28px;
+}
+
+.dv-project-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    max-width: 22ch;
+}
+
+.dv-project-lead {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--secondary);
+    max-width: 62ch;
+    margin: 0 0 36px;
+}
+
+.dv-project-back {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--accent-deep);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.dv-project-back:hover {
+    border-bottom-color: var(--accent-deep);
+}
+
+/* Scenes: each .scene is one scroll-snap-feel section */
+.dv-project-content .scene {
+    padding: clamp(60px, 10vw, 120px) 0;
+    border-top: 1px solid var(--border-soft);
+}
+
+.dv-project-content .scene:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.dv-project-content .scene-q {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-mid);
+    margin: 0 0 24px;
+}
+
+.dv-project-content .scene-a {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    color: var(--primary);
+    margin: 0 0 40px;
+    max-width: 26ch;
+}
+
+.dv-project-content .scene img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.dv-project-content .scene-note {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    line-height: 1.65;
+    margin: 36px 0 0;
+    max-width: 58ch;
+}
+
+/* Big stat tile */
+.dv-project-content .stat-tile {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) 1.3fr;
+    gap: clamp(24px, 4vw, 56px);
+    align-items: center;
+    padding: clamp(32px, 5vw, 56px);
+    background-color: var(--accent-deep);
+    color: #faf7f2;
+    border-radius: var(--radius);
+}
+
+.dv-project-content .stat-tile .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1;
+    color: #faf7f2;
+    margin: 0;
+}
+
+.dv-project-content .stat-tile .stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: rgba(250, 247, 242, 0.85);
+    margin: 0;
+}
+
+/* Three takeaways at the end */
+.dv-project-content .takeaways {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dv-project-content .takeaways li {
+    background-color: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    padding: 28px;
+}
+
+.dv-project-content .takeaways .tk-num {
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    color: var(--accent-mid);
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.dv-project-content .takeaways .tk-text {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--primary);
+    margin: 0;
+}
+
+/* Deep dive: tighter, smaller, almost a footnote */
+.dv-project-content .deep-dive {
+    margin-top: clamp(60px, 10vw, 100px);
+    padding: clamp(32px, 5vw, 48px);
+    background-color: var(--accent-soft, #f3efe7);
+    border-radius: var(--radius);
+}
+
+.dv-project-content .deep-dive h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-mid);
+    margin: 0 0 24px;
+}
+
+.dv-project-content .deep-dive h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    margin: 28px 0 12px;
+    color: var(--primary);
+}
+
+.dv-project-content .deep-dive p,
+.dv-project-content .deep-dive li {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--secondary);
+}
+
+.dv-project-content .deep-dive ul {
+    padding-left: 1.2em;
+}
+
+/* ============== REVEAL ON SCROLL ============== */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.22, 0.61, 0.36, 1),
+                transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* small stagger for child elements */
+.reveal .reveal-child {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    transition-delay: 0.15s;
+}
+
+.reveal.is-visible .reveal-child {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal .reveal-child {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
