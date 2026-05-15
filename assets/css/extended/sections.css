@@ -128,7 +128,36 @@ body.home-page .main,
 }
 
 .dv-hero-inner {
-    max-width: 920px;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    gap: clamp(24px, 5vw, 64px);
+}
+
+.dv-hero-text {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.dv-hero-portrait {
+    flex: 0 0 auto;
+    width: clamp(160px, 22vw, 260px);
+    height: clamp(160px, 22vw, 260px);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    border: 4px solid #faf7f2;
+}
+
+@media (max-width: 720px) {
+    .dv-hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .dv-hero-portrait {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .dv-eyebrow {
@@ -167,7 +196,10 @@ body.home-page .main,
 }
 
 .dv-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
     padding: 13px 24px;
     border-radius: var(--radius);
     font-family: 'Inter', sans-serif;
@@ -177,6 +209,7 @@ body.home-page .main,
     border: 1px solid transparent;
     transition: all 0.2s ease;
     border-bottom: 1px solid transparent;
+    text-align: center;
 }
 
 .dv-btn-primary {
