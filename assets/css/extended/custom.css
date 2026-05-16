@@ -13,7 +13,7 @@
     /* Text */
     --primary: #2e3a36;           /* anthracite-green: headings */
     --secondary: #5a4f42;         /* dark taupe: body */
-    --tertiary: #d9cfc2;          /* light taupe: borders */
+    --tertiary: #a89a87;          /* taupe: low-emphasis text + borders */
     --content: #4a4036;           /* paragraph color override */
 
     /* Accents */
